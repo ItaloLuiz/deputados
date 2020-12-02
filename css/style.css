@@ -17,4 +17,50 @@ body {
   width: 20%;
 }
 
-.panel-heading h2{font-size: 16px;}
+.panel-heading h2{
+  font-size: 16px;
+}
+
+.navbar-default {
+  background-color: #9dccdf;
+}
+
+.navbar-default .navbar-brand{
+  color: black;
+  font-size: 20px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+  background-color: transparent;
+  color: black;
+  font-size: 17px;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: black;
+  font-size: 17px;
+}
+
+.container .jumbotron, .container-fluid .jumbotron  {
+  border-radius: 20px;
+  padding: 20px 45px;
+  background-color: #006a9431;
+}
+
+.panel-info>.panel-heading {
+  background-color: #006a9431;
+  color: #2d3856;
+  text-align: center;
+}
+
+.panel-heading h2 {
+  font-weight: bold;
+}
+
+.jumbotron p {
+  margin-bottom: 5px;
+}
+
+p{
+  margin: 0 0 5px;
+}

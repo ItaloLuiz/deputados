@@ -69,15 +69,18 @@ function gerarLinkPagina(pg) {
   return url;
 }
 
+
+
 function pegarTotalDeDeputados() {
-  const urlTotal = `https://dadosabertos.camara.leg.br/api/v2/deputados?dataInicio=2016-01-01&ordem=ASC&ordenarPor=siglaUF`;
-  let total;
+  const urlTotal = `https://dadosabertos.camara.leg.br/api/v2/deputados?dataInicio=2016-01-01&ordem=ASC&ordenarPor=siglaUF`;  
 
   fetch(urlTotal).then(response => {
     let resultados = response.text();
+    //console.log(resultados)
     resultados.then(function (res) {
       let parse = JSON.parse(res);
       let dados = parse.dados;
+      //console.log(dados);
       showTotalDeputados(dados);
     });
   });
@@ -140,6 +143,8 @@ function gerarPaginacao(total) {
 
   linkPaginas = '<ul class="pagination">' + listaPagina + '</ul>';
   document.getElementById("paginas").innerHTML += linkPaginas;
+
+  //console.log(linkPaginas)
 }
 
 function tratarLinkPagina(pg) {
@@ -147,6 +152,8 @@ function tratarLinkPagina(pg) {
   localStorage.setItem('paginaAtual', pg);
   document.location.reload(true);
 }
+
+pegarTotalDeDeputados()
 
 
 const totalResultados = pegarTotalDeDeputadosLocalStorage();

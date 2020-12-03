@@ -1,0 +1,28 @@
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .jumbotron h1{font-size: 28px; font-weight: bold;}
+    .jumbotron p{font-size: 18px; line-height: 160%; margin-top:10px; margin-bottom: 10px;}
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .jumbotron h1{font-size: 26px; font-weight: bold;}
+    .jumbotron p{font-size: 16px; line-height: 160%; margin-top:10px; margin-bottom: 10px;}
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+   .jumbotron h1{font-size: 22px; font-weight: bold;}
+   .jumbotron p{font-size: 14px; line-height: 160%; margin-top:10px; margin-bottom: 10px;}
+
+}

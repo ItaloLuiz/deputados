@@ -23,7 +23,9 @@ function acompanharPerfil(id) {
     if (!(dados instanceof Array)) dados = [];
     dados.push(id);
 
-    localStorage.setItem('acompanharDeputado', JSON.stringify(dados));
+    let salvo = localStorage.setItem('acompanharDeputado', JSON.stringify(dados));
+
+    alert('Você agora segue esse perfil');
   }
 }
 

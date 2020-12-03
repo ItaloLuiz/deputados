@@ -5,29 +5,34 @@ let loopDeputados = '';
 
 //console.log(idDeputados[1])
 
+document.getElementById('seguindo').innerHTML = total;
 
 for (let i = 0; i < total; i++) {
     loopDeputados = idDeputados[i];
     //console.log(loopDeputados)
-
     pegarDadosDoDeputado(loopDeputados)
-
 }
 
+
+
 function pararDeacompanharPerfil(id) {
+    //pego todos os itens   
+    let listaDeputado =  JSON.parse(localStorage.getItem("acompanharDeputado"));
+    //quem vai sai
+    let removerDeputado = id;     
 
-    //pego todos os itens
+    for(let i = 0; i < listaDeputado.length;i++){
+        if(listaDeputado[i] == removerDeputado){
+            console.log('remover ' +  listaDeputado[i])            
+            let splice = listaDeputado.splice(i,1);  
+        }
+    }
 
-    let acompanharDeputado = localStorage.getItem('acompanharDeputado');
+    //console.log(listaDeputado)
+    localStorage.setItem('acompanharDeputado', JSON.stringify(listaDeputado));
 
-    //console.log(acompanharDeputado)
-
-    id_tag = id,
-        position = acompanharDeputado.indexOf(id);
-    if (~position) acompanharDeputado.splice(position, 1);
-
-
-    alert(position)
+    document.location.reload(true);
+    
 }
 
 

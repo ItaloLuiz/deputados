@@ -118,3 +118,9 @@ body {
     object-fit: cover;
     width: 200px;
   }
+
+ .dados-abertos{
+    font-size: 128px;
+    text-align: justify;
+ }
+

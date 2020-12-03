@@ -6,6 +6,9 @@ let loopDeputados = '';
 //console.log(idDeputados[1])
 
 
+getDeputados()
+
+function getDeputados(){
 for (let i = 0; i < total; i++) {
     loopDeputados = idDeputados[i];
     //console.log(loopDeputados)
@@ -13,21 +16,22 @@ for (let i = 0; i < total; i++) {
     pegarDadosDoDeputado(loopDeputados)
 
 }
+}
 
 function pararDeacompanharPerfil(id) {
 
     //pego todos os itens
 
-    let acompanharDeputado = localStorage.getItem('acompanharDeputado');
+    if (localStorage) {
+        let position = idDeputados.indexOf(id);
+        idDeputados.splice(position,1);
 
-    //console.log(acompanharDeputado)
-
-    id_tag = id,
-        position = acompanharDeputado.indexOf(id);
-    if (~position) acompanharDeputado.splice(position, 1);
+        localStorage.setItem('acompanharDeputado', JSON.stringify(idDeputados));
+        window.location.reload()
+      }
 
 
-    alert(position)
+
 }
 
 
